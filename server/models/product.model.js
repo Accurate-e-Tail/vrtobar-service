@@ -9,7 +9,7 @@ const Product = connection.define('product', {
     allowNull: false,
   },
   description: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false,
   },
   image: {

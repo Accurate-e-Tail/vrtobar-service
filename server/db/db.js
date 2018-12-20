@@ -3,6 +3,7 @@ const Sequelize = require('sequelize');
 const connection = new Sequelize('amazon_dev', 'student', 'student', {
   host: 'localhost',
   dialect: 'mysql',
+  logging: false,
 });
 
 connection

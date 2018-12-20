@@ -33,6 +33,6 @@ Promise.all(categoryPromises)
       .then((products) => {
         console.log(`Created ${products.length} products.`);
       })
-      .catch(err => console.log('Error: Products'));
+      .catch(err => console.log('Error: Products', err));
   })
-  .catch(err => console.log('Error: Categories'));
+  .catch(err => console.log('Error: Categories', err));

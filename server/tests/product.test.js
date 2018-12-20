@@ -18,4 +18,20 @@ describe('products tests', () => {
         return done();
       });
   });
+
+  test('should get all products from one categorie', (done) => {
+    request(app)
+      .get('/products/electronics/a')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body.products).toBeInstanceOf(Array);
+      })
+      .end((err) => {
+        if (err) {
+          return done(err);
+        }
+
+        return done();
+      });
+  });
 });

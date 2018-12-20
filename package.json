@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "champs-of-the-sun-amazon",
   "version": "",
   "description": "",
   "author": "",
@@ -8,10 +8,30 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "build": "webpack --mode development --watch",
+    "start": "nodemon server/server.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "nodemon": "^1.18.9",
+    "webpack": "^4.28.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }

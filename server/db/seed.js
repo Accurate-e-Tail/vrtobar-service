@@ -5,11 +5,10 @@ const { Product } = require('../models/product.model');
 
 // Create 20 categories and 100 products
 const categoryPromises = [];
-let categoryName;
+const categoryNames = ['Electronics', 'Clothes', 'Video Games', 'Appliances', 'Books'];
 
 for (let i = 0; i < 5; i++) {
-  categoryName = faker.commerce.department();
-  categoryPromises.push(Category.create({ category: categoryName }));
+  categoryPromises.push(Category.create({ category: categoryNames[i] }));
 }
 
 Promise.all(categoryPromises)
@@ -17,14 +16,22 @@ Promise.all(categoryPromises)
     const productPromises = [];
     let productName;
     let productDescription;
-    for (let j = 1; j <= 20; j++) {
-      productName = faker.commerce.productName();
-      productDescription = faker.lorem.paragraph();
-      productPromises.push(Product.create({ name: productName, description: productDescription, categoryId: categories[0].id }));
+
+    for (let i = 0; i < categories.length; i++) {
+      for (let j = 1; j <= 20; j++) {
+        productName = faker.commerce.productName();
+        productDescription = faker.lorem.paragraph();
+        productPromises.push(Product.create({
+          name: productName,
+          description: productDescription,
+          categoryId: categories[i].id,
+        }));
+      }
     }
+
     Promise.all(productPromises)
       .then((products) => {
-        console.log('Created products');
+        console.log(`Created ${products.length} products.`);
       })
       .catch(err => console.log('Error: Products'));
   })

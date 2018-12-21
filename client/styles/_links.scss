@@ -1,0 +1,32 @@
+.v_links-section {
+  background-color: #232f3e;
+  height: 3rem;
+
+  padding-bottom: .8rem;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    color: lightgrey;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    margin-right: 1rem;
+    font-weight: 300;
+    font-size: .9rem;
+
+    a {
+      color: lightgray;
+      text-decoration: none;
+    }
+
+    a:hover {
+      border-bottom: 1px solid lightgrey;
+    }
+  }
+}

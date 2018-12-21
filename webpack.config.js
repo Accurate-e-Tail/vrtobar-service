@@ -1,10 +1,11 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const SRC_DIR = path.join(__dirname, '/client');
 const DIST_DIR = path.join(__dirname, '/public');
 
 module.exports = {
-  entry: `${SRC_DIR}/app.jsx`,
+  entry: `${SRC_DIR}/index.jsx`,
   output: {
     filename: 'app.bundle.js',
     path: DIST_DIR,
@@ -18,6 +19,20 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.s?[ac]ss$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader', options: { url: false, sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } }
+        ],
+      },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+    }),
+  ],
 };

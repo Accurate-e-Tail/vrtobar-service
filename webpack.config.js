@@ -20,19 +20,12 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.s?[ac]ss$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              modules: true,
-              localIdentName: '[local]___[hash:base64:5]',
-            },
-          },
+          { loader: 'style-loader' },
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader', options: { url: false, sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } }
         ],
       },
     ],

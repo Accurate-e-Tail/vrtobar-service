@@ -1,7 +1,5 @@
 import React from 'react';
 
-import styles from './layout.css';
-
 class Layout extends React.Component {
   constructor(props) {
     super(props);
@@ -9,9 +7,11 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>Top Image</div>
-
+      <div className="layout-main">
+        <div><img src="images/nav_image.jpg"></img></div>
+        <div className="nav-bar">
+          
+        </div>
       </div>
     );
   }

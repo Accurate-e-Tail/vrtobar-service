@@ -1,0 +1,88 @@
+.v_layout-main {
+  // max-width: 80rem;
+}
+.v_nav-image-container {
+  overflow: hidden;
+}
+
+.v_nav-image {
+  
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 15% 56% 33%;
+  grid-template-rows: 50% 50%;
+}
+
+
+.v_logo-section {
+  background-color: yellow;
+  height: 4rem;
+}
+
+.v_search-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #232f3e;
+  height: 4rem;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2.2rem;;
+    width: 100%;
+
+    border-radius: .5rem;
+  }
+
+  &__select {
+    width: 7.5rem;
+    height: 2rem;
+    background-color: rgba(#eee, 1);
+    border:none;
+    border-radius: 0;
+  }
+
+  &__query {
+    flex: 1;
+    height: 2rem;
+
+    border: none;
+    border-radius: 0;
+  }
+
+  &__button {
+    background-color: #ff9900;
+    width: 3rem;
+    height: 2rem;
+
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.v_ad-section {
+  background-color: purple;
+  height: 4rem;
+}
+
+.v_location-section {
+  background-color: green;
+  height: 3rem;
+}
+
+.v_account-section {
+  background-color: red;
+  height: 3rem;
+}
+
+.v_links-section {
+  background-color: orange;
+  height: 3rem;
+}

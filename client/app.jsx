@@ -1,4 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-ReactDOM.render(<h1>App</h1>, document.getElementById('navigation-bar'));
+import Layout from './components/layout/layout.jsx';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Layout />
+    );
+  }
+}
+
+export default App;

@@ -13,7 +13,7 @@ const Search = (props) => {
           <option value="games">Games</option>
         </select>
         <input className="v_search-section__query" type="text" nmae="query" />
-        <button className="v_search-section__button" type="button">Search</button>
+        <div className="v_search-section__button" type="button">O</div>
       </div>
     </div>
   );

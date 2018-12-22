@@ -1,0 +1,27 @@
+.v_account-section {
+  background-color: #232f3e;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  padding-bottom: .3rem;
+
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+
+  &__button {
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__button:hover {
+    border: 1px solid lightgrey;
+  }
+
+  &__initial-text {
+    color: lightgrey;
+  }
+}

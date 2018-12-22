@@ -1,0 +1,23 @@
+.v_location-section {
+  background-color: #232f3e;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+
+  &__image {
+    color: white;
+    font-size: 2.5rem;
+    margin-right: 1rem;
+  }
+
+  &__info {
+    &--initial-text {
+      color: white;
+    }
+
+    &--secondary-text {
+      color: white;
+    }
+  }
+}

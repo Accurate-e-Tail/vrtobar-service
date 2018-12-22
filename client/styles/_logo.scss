@@ -1,0 +1,35 @@
+.v_logo-section {
+  background-color: #232f3e;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+
+  &__hamburger {
+    width: 2rem;
+
+    border: 1px solid white;
+    padding: .1rem .2rem;
+
+    &--div {
+      border-bottom: 1px solid white;
+      margin-bottom: .5rem;
+    }
+  }
+
+  &__logo {
+    padding-left: .5rem;
+    font-size: 2rem;
+  }
+
+  &__text {
+    color: white;
+  }
+
+  &__try {
+    &--text {
+      color: lightblue;
+      font-size: .8rem;
+    }
+  }
+}

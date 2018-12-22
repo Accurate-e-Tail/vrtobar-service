@@ -1,0 +1,17 @@
+.v_ad-section {
+  background-color: #232f3e;
+  height: 4rem;
+  font-size: 1.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__initial-text {
+    color: white;
+  }
+
+  &__secondary-text {
+    color: lightblue;
+  }
+}

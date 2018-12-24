@@ -10,6 +10,7 @@
   "scripts": {
     "build": "webpack --mode development --watch",
     "test-server": "jest --config ./server/tests/jest.config.json --detectOpenHandles",
+    "test-react": "jest --config ./client/tests/jest.config.json",
     "start": "nodemon server/server.js"
   },
   "dependencies": {
@@ -29,6 +30,8 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "css-loader": "^2.0.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
@@ -39,8 +42,8 @@
     "faker": "^4.1.0",
     "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "nodemon": "^1.18.9",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
     "regenerator-runtime": "^0.13.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

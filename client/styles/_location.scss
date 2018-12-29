@@ -1,6 +1,7 @@
 .v_location-section {
-  background-color: #232f3e;
+  background-color: $amazon-blue;
   height: 3rem;
+  padding-left: .5rem;
 
   display: flex;
   align-items: center;
@@ -14,10 +15,14 @@
   &__info {
     &--initial-text {
       color: white;
+      font-size: .7rem;
+      font-weight: 500;
     }
 
     &--secondary-text {
       color: white;
+      font-size: .9rem;
+      font-weight: 700;
     }
   }
 }

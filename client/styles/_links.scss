@@ -1,24 +1,28 @@
 .v_links-section {
-  background-color: #232f3e;
+  background-color: $amazon-blue;
   height: 3rem;
 
-  padding-bottom: .8rem;
+  padding-bottom: .3rem;
 
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 
+  
   &__list {
     display: flex;
+    justify-content: flex-start;
     list-style: none;
     color: lightgrey;
-    justify-content: flex-start;
   }
-
+  
   &__item {
     margin-right: 1rem;
     font-weight: 300;
     font-size: .9rem;
+    
+    font-size: 1.3rem;
+    font-weight: 300;
 
     a {
       color: lightgray;
@@ -27,6 +31,22 @@
 
     a:hover {
       border-bottom: 1px solid lightgrey;
+    }
+  }
+
+  &__lang {
+    width: 2.8rem;
+    height: 2.8rem;
+    border:none;
+    border-radius: 0;
+    background-color: $amazon-blue;
+    border: 1px solid $amazon-blue;
+    color: lightgrey;
+    font-size: .8rem;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #777;
     }
   }
 }

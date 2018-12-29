@@ -12,7 +12,7 @@ const Links = (props) => {
         <li className="v_links-section__item"><a href="#">Sell</a></li>
         <li className="v_links-section__item"><a href="#">Help</a></li>
       </ul>
-      <select name="lang" id="lang">
+      <select name="lang" id="lang" className="v_links-section__lang">
         <option value="en">EN</option>
         <option value="es">ES</option>
       </select>

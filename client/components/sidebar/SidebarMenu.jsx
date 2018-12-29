@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SidebarSublist from './SidebarSublist.jsx';
+import SidebarSubMenu from './SidebarSubMenu.jsx';
 
 const LIST_ITEMS = [
   {
@@ -31,27 +31,33 @@ const LIST_ITEMS = [
   },
 ];
 
-class SidebarList extends React.Component {
+class SidebarMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isSubmenuOpen: false,
     };
+    this.listItemClicked = this.listItemClicked.bind(this);
+  }
+
+  listItemClicked(e) {
+    console.log(e.target.attributes.itemIndex.value);
+    console.log(e.target.attributes.subMenuIndex.value);
   }
 
   render() {
-    const menuItemsJSX = LIST_ITEMS.map((subMenu) => {
+    const menuItemsJSX = LIST_ITEMS.map((subMenu, index) => {
       return (
-        <SidebarSublist subMenu={subMenu} />
+        <SidebarSubMenu listItemClicked={this.listItemClicked} subMenuIndex={index} subMenu={subMenu} />
       );
     });
 
     return (
-      <div className="v_sidebar-list">
-        <div className="v_sidebar-list__header">
-          <p>Hello. Sign in</p>
+      <div className="v_sidebar-menu">
+        <div className="v_sidebar-menu__header">
+          <p className="v_sidebar-menu__header--text">Hello. Sign in</p>
         </div>
-        <div className="v_sidebar-list__list">
+        <div className="v_sidebar-menu__list">
           {this.state.isSubmenuOpen && <li className="v_sidebar-list__list-back">-- Main Menu</li>}
           {menuItemsJSX}
         </div>
@@ -60,4 +66,4 @@ class SidebarList extends React.Component {
   }
 }
 
-export default SidebarList;
+export default SidebarMenu;

@@ -6,24 +6,49 @@
 
   display: flex;
   height: 100vh;
-  width: 100vw;;
+  width: 100vw;
 }
 
-.v_sidebar-list {
+.v_sidebar-menu {
   background-color: white;
   width: 25%;
-
+  overflow: scroll;
+  
   &__header {
     height: 3rem;
     background-color: #232f3e;
-    color: white;
-  }
 
+    &--text {
+      color: white;
+    }
+  }
+  
   &__list {
     list-style: none;
 
     &-back {
-      
+
+    }
+  }
+}
+
+.v_sidebar-section__submenu {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid grey;
+  
+  &--header {
+    color: grey;
+    padding-left: 2rem;
+  }
+
+  &--item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    
+    &:hover {
+      background-color: lightseagreen;
     }
   }
 }

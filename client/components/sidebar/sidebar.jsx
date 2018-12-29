@@ -1,11 +1,11 @@
 import React from 'react';
 
 import SidebarOverlay from './SidebarOverlay.jsx';
-import SidebarList from './SidebarList.jsx';
+import SidebarMenu from './SidebarMenu.jsx';
 
 const Sidebar = props => (
   <div className="v_sidebar-section">
-    <SidebarList toggleSidebar={props.toggleSidebar} />
+    <SidebarMenu toggleSidebar={props.toggleSidebar} />
     <SidebarOverlay toggleSidebar={props.toggleSidebar} />
   </div>
 );

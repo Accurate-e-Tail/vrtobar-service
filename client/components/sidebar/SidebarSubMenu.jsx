@@ -17,7 +17,7 @@ const SidebarSubMenu = (props) => {
         subMenuIndex={props.subMenuIndex}
         onClick={props.listItemClicked}
       >
-        {item}
+        {item.value || item}
       </li>
     );
   });

@@ -12,7 +12,7 @@ class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false,
+      isOpen: true,
     };
     this.toggleSidebar = this.toggleSidebar.bind(this);
   }

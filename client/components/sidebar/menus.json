@@ -141,9 +141,9 @@
   },
   {
     "items": [
-      { "value": "Clothing" }, { "value": "Shoes" }, { "value": "Jewelry & Watches" },
+      { "value": "Clothing, Shoes, Jewelry & Watches" },
       { "value": "AmazonFresh" }, { "value": "Books & Audible" }, { "value": "Movies, Music & Games" },
-      { "value": "Electronics" }, { "value": "Computers & Office" }, { "value": "Alexa Smart Home" },
+      { "value": "Electronics, Computers & Office" }, { "value": "Alexa Smart Home" },
       { "value": "Home, Garden & Tools" }, { "value": "Pet Supplies" }, { "value": "Restaurants, Food & Grocery" },
       { "value": "Beauty & Health" }, { "value": "Toys, Kids & Baby" }, { "value": "Handmade" },
       { "value": "Sports & Outdoors" }, { "value": "Automotive & Industrial" }

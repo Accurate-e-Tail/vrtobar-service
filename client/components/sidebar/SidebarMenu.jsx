@@ -41,7 +41,6 @@ class SidebarMenu extends React.Component {
       menuItemsJSX = LIST_ITEMS[this.state.subMenuIndex].items[this.state.subMenuItemIndex].subItems.map((subMenu, index) => {
         return (
           <React.Fragment>
-            <li className="v_sidebar-list__list-back" onClick={this.backClickHandler}>-- Main Menu</li>
             <SidebarSubMenu listItemClicked={this.listItemClicked} subMenuIndex={index} subMenu={subMenu} />
           </React.Fragment>
         );
@@ -50,16 +49,19 @@ class SidebarMenu extends React.Component {
       menuItemsJSX = LIST_ITEMS.map((subMenu, index) => {
         return (
           <SidebarSubMenu listItemClicked={this.listItemClicked} subMenuIndex={index} subMenu={subMenu} />
-        );
-      });
-    }
-
-    return (
-      <div className="v_sidebar-menu">
+          );
+        });
+      }
+      
+      return (
+        <div className="v_sidebar-menu">
         <div className="v_sidebar-menu__header">
           <p className="v_sidebar-menu__header--text">Hello. Sign in</p>
         </div>
         <div className="v_sidebar-menu__list">
+          {this.state.isSubmenuOpen && 
+            <li className="v_sidebar-menu__list-back" onClick={this.backClickHandler}>-- MAIN MENU</li>
+          }
           {menuItemsJSX}
         </div>
       </div>

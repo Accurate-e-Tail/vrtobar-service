@@ -1,0 +1,167 @@
+[
+  {
+    "header": "SHOP BY CATEGORY",
+    "items": [
+      {
+        "value": "Prime Video",
+        "subItems": [
+          {
+            "header": "PRIME VIDEO",
+            "items": [
+              "Prime Video", "Included with Prime", "Prime Video Channels", "Rent or Buy",
+              "Your Watchlist", "Your Video Library", "Watch Anywhere", "Getting Started"
+            ]
+          },
+          {
+            "header": "MORE TO EXPLORE",
+            "items": [
+              "Prime Originals", "Kids", "Coming to Prime"
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Amazon Music",
+        "subItems": [
+          {
+            "header": "STREAM MUSIC",
+            "items": [
+              "Amazon Music Unlimited", "Prime Music", "Open Web Player"
+            ]
+          },
+          {
+            "header": "BUY MUSIC",
+            "items": [
+              "CDs & Vinyl", "Download Store"
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Echo & Alexa",
+        "subItems": [
+          {
+            "header": "ECHO & ALEXA",
+            "items": [
+              "Echo", "All-new Echo Plus", "All-new Echo Dot", "Echo Dot Kids Edition",
+              "Echo Spot", "All-new Echo Show", "Introducing Echo Auto", "See all devices with Alexa"
+            ]
+          },
+          {
+            "header": "ALEXA SMART HOME",
+            "items": [
+              "Introducing Amazon Smart Plug", "Introducing AmazonBasics Microwave",
+              "Home Security", "See all smart home devices"
+            ]
+          },
+          {
+            "header": "CONTENT & RESOURCES",
+            "items": [
+              "Meet Alexa", "Alexa App", "Alexa Skills"
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Fire Tablets",
+        "subItems": [
+          {
+            "header": "FIRE TABLETS",
+            "items": [
+              "Fire 7", "All-new Fire HD 8", "Fire HD 10", "Fire 7 Kids Edition",
+              "All-new Fire HD 8 Kids Edition", "All-new Fire HD 10 Kids Edition",
+              "Accessories", "See all Fire Tablets" 
+            ]
+          },
+          {
+            "header": "CONTENT & RESOURCES",
+            "items": [
+              "Prime Video", "Apps & Games", "Digital Music", "Kindle Books", "Kindle Unlimited",
+              "Amazon FreeTime Unlimited", "Newsstand", "Manage Your Content and Devices"
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Fire TV",
+        "subItems": [
+          {
+            "header": "WATCH AND PLAY",
+            "items": [
+              "Introducing Fire TV Stick 4K", "Fire TV Stick", "Fire TV Cube",
+              "Introducing Fire TV Recast", "See Fire TV Family"
+            ]
+          },
+          {
+            "header": "MOVIES, TV, AND GAMES",
+            "items": [
+              "Prime Video - Included with Prime", "Fire TV Apps & Channels",
+              "Games for Fire TV", "Amazon Photos"
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Kindle E-readers & Books",
+        "subItems": [
+          {
+            "header": "KINDLE E-READERS",
+            "items": [
+              "Kindle", "All-new Kindle Paperwhite", "Kindle Oasis",
+              "Kindle for Kids Bundle", "Accessories", "See all Kindle E-Readers"
+            ]
+          },
+          {
+            "header": "KINDLE STORE",
+            "items": [
+              "Kindle Books", "Newsstand", "Kindle Unlimited", "Prime Reading"
+            ]
+          },
+          {
+            "header": "APPS & RESOURCES",
+            "items": [
+              "Free Kindle Reading Apps", "Kindle Cloud Reader", "Manage Your Content and Devices"
+            ]
+          }
+        ]
+      },
+      {
+        "value": "Appstore for Android",
+        "subItems": [
+          {
+            "header": "APPSTORE FOR ANDROID",
+            "items": [
+              "All Apps and Games", "Games", "Amazon Coins", "Download Amazon Appstore",
+              "Amazon Apps", "Your Apps and Subscriptions"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "items": [
+      { "value": "Clothing, Shoes, Jewelry & Watches" },
+      { "value": "AmazonFresh" }, { "value": "Books & Audible" }, { "value": "Movies, Music & Games" },
+      { "value": "Electronics, Computers & Office" }, { "value": "Alexa Smart Home" },
+      { "value": "Home, Garden & Tools" }, { "value": "Pet Supplies" }, { "value": "Restaurants, Food & Grocery" },
+      { "value": "Beauty & Health" }, { "value": "Toys, Kids & Baby" }, { "value": "Handmade" },
+      { "value": "Sports & Outdoors" }, { "value": "Automotive & Industrial" }
+    ]
+  },
+  {
+    "items": [
+      { "value": "Whole Foods Market" }, { "value": "Make Money with Amazon" }, { "value": "Home Services" },
+      { "value": "Credit & Payment Products" }, { "value": "Amazon Launchpad" }, { "value": "Amazon Exclusives" },
+      { "value": "Subscribe with Amazon" }, { "value": "Treasure Truck" }, { "value": "International Shopping" },
+      { "value": "Amazon Photos & Prints" }, { "value": "Small & Medium Business" }, { "value": "Full Store Directory" }
+    ]
+  },
+  {
+    "header": "HELP & SETTINGS",
+    "items": [
+      { "value": "Your Account" }, { "value": "English" },{ "value": "United States" },
+      { "value": "Help" }, { "value": "Sign In" }
+    ]
+  }
+]

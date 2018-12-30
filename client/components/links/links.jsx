@@ -12,10 +12,15 @@ const Links = (props) => {
         <li className="v_links-section__item"><a href="#">Sell</a></li>
         <li className="v_links-section__item"><a href="#">Help</a></li>
       </ul>
-      <select name="lang" id="lang" className="v_links-section__lang">
-        <option value="en">EN</option>
-        <option value="es">ES</option>
-      </select>
+      <div className="v_links-section__lang">
+        <div className="v_links-section__lang--text">EN</div>
+        <div className="v_links-section__lang--bottom">
+          <div className="v_links-section__lang--image-container">
+            <img className="v_links-section__lang--image" src="images/globe.png" alt="globe icon" />
+          </div>
+          <i className="arrow-down" />
+        </div>
+      </div>
     </div>
   );
 };

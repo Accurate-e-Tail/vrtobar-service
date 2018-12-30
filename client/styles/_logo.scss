@@ -13,6 +13,7 @@
     border: 1px solid #777;
     border-radius: 2px;
     padding: .5rem;
+    cursor: pointer;
 
     &:hover {
       border: 1px solid #aaa;
@@ -34,14 +35,21 @@
 
   &__text {
     color: white;
+    cursor: pointer;
   }
 
   &__try {
+    cursor: pointer;
+    
     &--text {
       color: $amazon-blue-light;
       font-size: .7rem;
       font-weight: 700;
       text-decoration: underline;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 }

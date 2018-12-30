@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color: #232f3e;
+  background-color: $amazon-blue;
   height: 4rem;
 
   &__wrapper {
@@ -15,7 +15,8 @@
     height: 2.2rem;;
     width: 100%;
 
-    border-radius: 1rem;
+    border-radius: .2rem;
+    overflow: hidden;
   }
 
   &__select {
@@ -35,9 +36,10 @@
   }
 
   &__button {
-    background-color: #ff9900;
+    background-color: $amazon-yellow;
     height: 2.2rem;
     width: 3rem;
+    cursor: pointer;
 
     display: flex;
     justify-content: center;

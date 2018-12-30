@@ -1,15 +1,30 @@
 .v_location-section {
   background-color: $amazon-blue;
   height: 3rem;
+  padding: .2rem;
   padding-left: .5rem;
-
+  
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  
+  &__button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid $amazon-blue;
+    border-radius: .2rem;
+    cursor: pointer;
+    padding: .3rem;
+    
+    &:hover {
+      border: 1px solid #777;
+    }
+  }
 
   &__image {
     color: white;
     font-size: 2.5rem;
-    margin-right: 1rem;
+    margin-right: .3rem;
   }
 
   &__info {

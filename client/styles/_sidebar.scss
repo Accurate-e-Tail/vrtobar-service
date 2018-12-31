@@ -17,12 +17,23 @@
   
   &__header {
     height: 3.2rem;
-    padding-left: 2.1rem;
-    background-color: #232f3e;
+    padding-left: 4.5rem;
+    background-color: $amazon-blue;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
-    &--text {
+    position: absolute;
+    width: 25%;
+    height: 3rem;
+
+    background-image: url(images/account.png);
+    background-repeat: no-repeat;
+    background-position-x: 2.1rem;
+    background-position-y: 50%;
+    background-size: 2rem;
+
+    &__text {
       color: white;
       font-size: 1.2rem;
       font-weight: 5400;
@@ -37,9 +48,17 @@
       font-size: .9rem;
       font-weight: 500;
       border-bottom: 1px solid $color-divisor;
+      padding-left: 4.2rem;
+
+      background-image: url(images/back-light.png);
+      background-repeat: no-repeat;
+      background-position-x: 2.1rem;
+      background-position-y: 50%;
+      background-size: 1.3rem;
 
       &:hover {
         cursor: pointer;
+        background-image: url(images/back-dark.png);
         background-color: rgba(#949494, .15);
       }
     }
@@ -49,6 +68,10 @@
 .v_sidebar-section__submenu {
   padding-bottom: .2rem;
   font-size: 1.4rem;
+
+  &:first-child {
+    margin-top: 3rem;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid $color-divisor;
@@ -61,10 +84,10 @@
 
   &--item {
     padding: .9rem 0rem .9rem 2.1rem;
-    
+
     &:hover {
-      cursor: pointer;
       background-color: rgba(#949494, .15);
+      cursor: pointer;
     }
   }
 }
@@ -73,11 +96,34 @@
   flex: 1;
   background-color: rgba(black, .8);
 
+  &__image-container {
+    margin: .9rem;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &--image {
+      height: 1.5rem;
+      max-width: 100%;
+    }
+  }
+
   .v_sidebar-overlay__button {
     font-family: sans-serif;
     font-weight: 100;
     font-size: 1.5rem;
     color: white;
     margin: 1rem;
+  }
+}
+
+.has-sub-menus {
+  background-image: url(images/forward-light.png);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  background-size: 1.3rem;
+
+  &:hover {
+    background-image: url(images/forward-dark.png);
   }
 }

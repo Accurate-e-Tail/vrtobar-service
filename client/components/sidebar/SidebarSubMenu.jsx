@@ -12,7 +12,7 @@ const SidebarSubMenu = (props) => {
   let itemsJSX = props.subMenu.items.map((item, index) => {
     return (
       <li
-        className="v_sidebar-section__submenu--item"
+        className={`v_sidebar-section__submenu--item ${item.subItems ? "has-sub-menus": ""}`}
         itemIndex={index}
         subMenuIndex={props.subMenuIndex}
         onClick={props.listItemClicked}

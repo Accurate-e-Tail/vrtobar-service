@@ -20,12 +20,9 @@ class SidebarMenu extends React.Component {
   }
 
   listItemClicked(e) {
-    console.log(e.target.attributes.subMenuIndex.value);
-    console.log(e.target.attributes.itemIndex.value);
     const subMenuIndex = e.target.attributes.subMenuIndex.value;
     const subMenuItemIndex = e.target.attributes.itemIndex.value;
 
-    // check if it has submenu
     this.setState((state) => {
       return {
         isSubmenuOpen: LIST_ITEMS[subMenuIndex].items[subMenuItemIndex].subItems !== undefined,
@@ -49,18 +46,18 @@ class SidebarMenu extends React.Component {
       menuItemsJSX = LIST_ITEMS.map((subMenu, index) => {
         return (
           <SidebarSubMenu listItemClicked={this.listItemClicked} subMenuIndex={index} subMenu={subMenu} />
-          );
-        });
-      }
-      
-      return (
-        <div className="v_sidebar-menu">
+        );
+      });
+    }
+
+    return (
+      <div className="v_sidebar-menu">
         <div className="v_sidebar-menu__header">
-          <p className="v_sidebar-menu__header--text">Hello. Sign in</p>
+          <p className="v_sidebar-menu__header__text">Hello. Sign in</p>
         </div>
         <div className="v_sidebar-menu__list">
           {this.state.isSubmenuOpen && 
-            <li className="v_sidebar-menu__list-back" onClick={this.backClickHandler}>-- MAIN MENU</li>
+            <li className="v_sidebar-menu__list-back" onClick={this.backClickHandler}>MAIN MENU</li>
           }
           {menuItemsJSX}
         </div>

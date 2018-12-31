@@ -3,6 +3,7 @@ import React from 'react';
 const Account = (props) => {
   return (
     <div className="v_account-section">
+      <div className="v_account-section__divider" />
       <div className="v_account-section__holder">
         <div className="v_account-section__button">
           <p className="v_account-section__initial-text">Hello, Sign in</p>

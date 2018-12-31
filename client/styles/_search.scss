@@ -5,12 +5,15 @@
   align-items: center;
 
   background-color: $amazon-blue;
-  height: 4rem;
+  padding-right: 1rem;
+  padding-left: 0;
 
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 
     height: 2.2rem;;
     width: 100%;
@@ -23,8 +26,32 @@
     width: 7.5rem;
     height: 2.2rem;
     background-color: rgba(#eee, 1);
-    border:none;
-    border-radius: 0;
+    color: #555;
+    font-size: .725rem;
+    cursor: pointer;
+
+    position: relative;
+    padding-left: .7rem;
+
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+
+    &:hover {
+      background-color: #ddd;
+    }
+
+    &--option {
+
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    margin-left: -1rem;
   }
 
   &__query {
@@ -33,6 +60,8 @@
 
     border: none;
     border-radius: 0;
+
+    outline-color: $amazon-yellow;
   }
 
   &__button {

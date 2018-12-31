@@ -1,6 +1,5 @@
 .v_logo-section {
   background-color: $amazon-blue;
-  height: 4rem;
   padding-left: .5rem;
 
   display: flex;
@@ -29,7 +28,6 @@
   }
 
   &__logo {
-    padding-left: .5rem;
     font-size: 2.5rem;
 
     &--image-container {

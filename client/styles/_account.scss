@@ -1,13 +1,16 @@
 .v_account-section {
   background-color: $amazon-blue;
-  height: 3rem;
-  padding-left: 1rem;
   padding-right: .2rem;
   padding-bottom: .3rem;
-
-  border-left: 1px solid #777;
-
+  
   display: flex;
+  
+  &__divider {
+    max-height: 75%;
+    border-left: 1px solid #777;
+    margin-top: .5rem;
+    margin-bottom: .3rem;
+  }
 
   &__holder {
     display: flex;
@@ -56,8 +59,11 @@
   &__button {
     color: white;
     padding: .45rem;
+    padding-right: .5rem;
+    padding-bottom: .2rem;
 
     border: 1px solid $amazon-blue;
+    border-radius: .2rem;
     font-size: .85rem;
     font-weight: 700;
     cursor: pointer;

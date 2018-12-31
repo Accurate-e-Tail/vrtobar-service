@@ -1,6 +1,5 @@
 .v_location-section {
   background-color: $amazon-blue;
-  height: 3rem;
   padding: .2rem;
   padding-left: .5rem;
   
@@ -39,6 +38,7 @@
   &__info {
     flex-grow: 1;
     margin-right: auto;
+    margin-left: .1rem;
 
     &--initial-text {
       color: white;

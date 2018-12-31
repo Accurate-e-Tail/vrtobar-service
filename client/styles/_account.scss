@@ -21,6 +21,38 @@
     align-items: center;
   }
 
+  &__cart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    
+    &__image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    &--image {
+      height: 1.8rem;
+      max-width: 100%;
+    }
+
+    &--count {
+      font-size: 1rem;
+      color: $amazon-orange;
+      position: absolute;
+      margin-left: 1.25rem;
+      margin-top: -.3rem;
+    }
+
+    &--text {
+      font-size: .85rem;
+      font-weight: 700;
+      margin-left: -.2rem;
+    }
+  }
+
   &__button {
     color: white;
     padding: .45rem;

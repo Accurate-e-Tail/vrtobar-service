@@ -25,7 +25,17 @@ const Account = (props) => {
       </div>
       <div className="v_account-section__holder">
         <div className="v_account-section__button">
-          <p className="v_account-section__secondary-text">Cart</p>
+          <div className="v_account-section__cart">
+            <div className="v_account-section__cart--image-container">
+              <p className="v_account-section__cart--count">0</p>
+              <img
+                className="v_account-section__cart--image"
+                src="images/cart.png"
+                alt="cart icon"
+              />
+            </div>
+            <p className="v_account-section__cart--text">Cart</p>
+          </div>
         </div>
       </div>
     </div>

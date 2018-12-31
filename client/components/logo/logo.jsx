@@ -9,7 +9,9 @@ const Logo = (props) => {
         <div className="v_logo-section__hamburger--div"></div>
       </div>
       <div className="v_logo-section__logo">
-        <p className="v_logo-section__text">amazon</p>
+        <div className="v_logo-section__logo--image-container">
+          <img src="images/logo.png" alt="logo icon" className="v_logo-section__logo--image-container--image" />
+        </div>
       </div>
       <div className="v_logo-section__try">
         <p className="v_logo-section__try--text">Try Prime</p>

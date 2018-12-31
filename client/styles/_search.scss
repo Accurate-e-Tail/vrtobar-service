@@ -39,14 +39,16 @@
     background-color: $amazon-yellow;
     height: 2.2rem;
     width: 3rem;
+    padding: .2rem;
     cursor: pointer;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
 
-    border: none;
-    border-radius: 0;
+    &-image {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
   }
 }

@@ -13,7 +13,9 @@ const Search = (props) => {
           <option value="games">Games</option>
         </select>
         <input className="v_search-section__query" type="text" nmae="query" />
-        <div className="v_search-section__button" type="button">O</div>
+        <div className="v_search-section__button" type="button">
+          <img src="images/search.png" className="v_search-section__button-image" alt="search icon" />
+        </div>
       </div>
     </div>
   );

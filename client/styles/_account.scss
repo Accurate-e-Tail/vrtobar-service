@@ -1,27 +1,86 @@
 .v_account-section {
-  background-color: #232f3e;
-  height: 3rem;
-  padding-left: 1rem;
-  padding-right: 2rem;
+  background-color: $amazon-blue;
+  padding-right: .2rem;
   padding-bottom: .3rem;
-
+  
   display: flex;
-  align-items: space-between;
-  justify-content: space-between;
+  
+  &__divider {
+    max-height: 75%;
+    border-left: 1px solid #777;
+    margin-top: .5rem;
+    margin-bottom: .3rem;
+  }
 
-  &__button {
-    color: white;
-
+  &__holder {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
 
-  &__button:hover {
-    border: 1px solid lightgrey;
+  &__arrow-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__cart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    
+    &__image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    &--image {
+      height: 1.8rem;
+      max-width: 100%;
+    }
+
+    &--count {
+      font-size: 1rem;
+      color: $amazon-orange;
+      position: absolute;
+      margin-left: 1.25rem;
+      margin-top: -.3rem;
+    }
+
+    &--text {
+      font-size: .85rem;
+      font-weight: 700;
+      margin-left: -.2rem;
+    }
+  }
+
+  &__button {
+    color: white;
+    padding: .45rem;
+    padding-right: .5rem;
+    padding-bottom: .2rem;
+
+    border: 1px solid $amazon-blue;
+    border-radius: .2rem;
+    font-size: .85rem;
+    font-weight: 700;
+    cursor: pointer;
+    
+    &:hover {
+      border: 1px solid #777;
+    }
   }
 
   &__initial-text {
     color: lightgrey;
+    font-size: .75rem;
+    font-weight: 500;
+  }
+
+  &__secondary-text {
+    font-size: .85rem;
+    font-weight: 700;
   }
 }

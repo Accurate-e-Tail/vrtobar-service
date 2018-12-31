@@ -1,8 +1,6 @@
 .v_links-section {
-  background-color: #232f3e;
-  height: 3rem;
-
-  padding-bottom: .8rem;
+  background-color: $amazon-blue;
+  padding-bottom: .3rem;
 
   display: flex;
   align-items: flex-end;
@@ -10,15 +8,18 @@
 
   &__list {
     display: flex;
+    justify-content: flex-start;
     list-style: none;
     color: lightgrey;
-    justify-content: flex-start;
   }
-
+  
   &__item {
     margin-right: 1rem;
     font-weight: 300;
     font-size: .9rem;
+    
+    font-size: 1.3rem;
+    font-weight: 300;
 
     a {
       color: lightgray;
@@ -27,6 +28,46 @@
 
     a:hover {
       border-bottom: 1px solid lightgrey;
+    }
+  }
+
+  &__lang {
+    width: 2.9rem;
+    height: 2.9rem;
+    border: none;
+    border-radius: 3px;
+    background-color: $amazon-blue;
+    border: 1px solid $amazon-blue;
+    cursor: pointer;
+    padding: .3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    &:hover {
+      border: 1px solid #777;
+    }
+    
+    &--bottom {
+      margin-top: .1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--text {
+      color: lightgrey;
+      font-size: .8rem;
+    }
+
+    &--image-container {
+      
+    }
+
+    &--image {
+      max-width: 75%;
+      max-height: 75%;
     }
   }
 }

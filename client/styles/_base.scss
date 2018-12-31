@@ -3,11 +3,13 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 .navigation-bar {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 62.5%;
 }
 
 .navigation-bar * {
@@ -19,4 +21,13 @@ body {
 
 .navigation-bar ul, ol {
   list-style: none;
+}
+
+.arrow-down {
+  margin-left: .3rem;
+  width: 0; 
+  height: 0; 
+  border-left: .26rem solid transparent;
+  border-right: .26rem solid transparent;
+  border-top: .26rem solid #999;
 }

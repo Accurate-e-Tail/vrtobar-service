@@ -1,23 +1,55 @@
 .v_location-section {
-  background-color: #232f3e;
-  height: 3rem;
-
+  background-color: $amazon-blue;
+  padding: .2rem;
+  padding-left: .5rem;
+  
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  
+  &__button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-  &__image {
+    border: 1px solid $amazon-blue;
+    border-radius: .2rem;
+    cursor: pointer;
+    padding: .3rem;
+    
+    &:hover {
+      border: 1px solid #777;
+    }
+  }
+
+  &__image-container {
     color: white;
     font-size: 2.5rem;
-    margin-right: 1rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--image {
+      width: 1.55rem;
+      height: 1.55rem;
+    }
   }
 
   &__info {
+    flex-grow: 1;
+    margin-right: auto;
+    margin-left: .1rem;
+
     &--initial-text {
       color: white;
+      font-size: .7rem;
+      font-weight: 500;
     }
 
     &--secondary-text {
       color: white;
+      font-size: .9rem;
+      font-weight: 700;
     }
   }
 }

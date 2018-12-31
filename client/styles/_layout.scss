@@ -1,5 +1,5 @@
 .v_layout-main {
-  // max-width: 80rem;
+
 }
 .v_nav-image-container {
   overflow: hidden;
@@ -11,27 +11,14 @@
 
 .nav-container {
   display: grid;
-  grid-template-columns: 15% 55% 30%;
+  grid-template-columns: 15% 56.5% 28.5%;
   grid-template-rows: 50% 50%;
 }
 
-
-.v_logo-section {
-  background-color: yellow;
-  height: 4rem;
+.v_logo-section, .v_search-section, .v_ad-section {
+  height: 3.3rem;
 }
 
-.v_ad-section {
-  background-color: purple;
-  height: 4rem;
-}
-
-.v_location-section {
-  background-color: green;
-  height: 3rem;
-}
-
-.v_account-section {
-  background-color: red;
+.v_location-section, .v_links-section, .v_account-section {
   height: 3rem;
 }

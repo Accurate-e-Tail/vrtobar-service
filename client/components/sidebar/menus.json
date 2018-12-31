@@ -141,20 +141,128 @@
   },
   {
     "items": [
-      { "value": "Clothing, Shoes, Jewelry & Watches" },
-      { "value": "AmazonFresh" }, { "value": "Books & Audible" }, { "value": "Movies, Music & Games" },
-      { "value": "Electronics, Computers & Office" }, { "value": "Alexa Smart Home" },
-      { "value": "Home, Garden & Tools" }, { "value": "Pet Supplies" }, { "value": "Restaurants, Food & Grocery" },
-      { "value": "Beauty & Health" }, { "value": "Toys, Kids & Baby" }, { "value": "Handmade" },
-      { "value": "Sports & Outdoors" }, { "value": "Automotive & Industrial" }
+      {
+        "value": "Clothing, Shoes, Jewelry & Watches",
+        "subItems": [
+          {
+            "header": "CLOTHING, SHOES, 'JEWELRY & WATCHES",
+            "items": [
+              "Amazon Fashion", "Women", "Men", "Girls", "Boys", "Baby",
+              "Luggage", "Prime Wardrobe", "Sales & Deals"
+            ]
+          },
+          {
+            "header": "MORE TO EXPLORE",
+            "items": [
+              "Our Brands", "The Shop by Shopbop"
+            ]
+          }
+        ]
+      },
+      {
+        "value": "AmazonFresh",
+        "subItems": []
+      },
+      { 
+        "value": "Books & Audible",
+        "subItems": []
+      }, 
+      { 
+        "value": "Movies, Music & Games",
+        "subItems": []
+      },
+      { 
+        "value": "Electronics, Computers & Office",
+        "subItems": []
+        },
+        { 
+          "value": "Alexa Smart Home",
+          "subItems": []
+        },
+      { 
+        "value": "Home, Garden & Tools",
+        "subItems": []
+      }, 
+      { 
+        "value": "Pet Supplies",
+        "subItems": []
+      },
+      { 
+        "value": "Restaurants, Food & Grocery",
+        "subItems": []
+      },
+      { 
+        "value": "Beauty & Health",
+        "subItems": []
+      },
+      { 
+        "value": "Toys, Kids & Baby",
+        "subItems": []
+      },
+      {
+        "value": "Handmade",
+        "subItems": []
+      },
+      {
+        "value": "Sports & Outdoors",
+        "subItems": []
+      },
+      { 
+        "value": "Automotive & Industrial",
+        "subItems": []
+      }
     ]
   },
   {
     "items": [
-      { "value": "Whole Foods Market" }, { "value": "Make Money with Amazon" }, { "value": "Home Services" },
-      { "value": "Credit & Payment Products" }, { "value": "Amazon Launchpad" }, { "value": "Amazon Exclusives" },
-      { "value": "Subscribe with Amazon" }, { "value": "Treasure Truck" }, { "value": "International Shopping" },
-      { "value": "Amazon Photos & Prints" }, { "value": "Small & Medium Business" }, { "value": "Full Store Directory" }
+      {
+        "value": "Whole Foods Market",
+        "subItems": []
+      },
+      { 
+        "value": "Make Money with Amazon",
+        "subItems": []
+      }, 
+      { 
+        "value": "Home Services",
+        "subItems": []
+      },
+      { 
+        "value": "Credit & Payment Products",
+        "subItems": []
+      }, 
+      { 
+        "value": "Amazon Launchpad",
+        "subItems": []
+      },
+      { 
+        "value": "Amazon Exclusives",
+        "subItems": []
+      },
+      { 
+        "value": "Subscribe with Amazon",
+        "subItems": []
+      },
+      { 
+        "value": "Treasure Truck",
+        "subItems": []
+      }, 
+      { 
+        "value": "International Shopping",
+        "subItems": []
+      },
+      { 
+        "value": "Amazon Photos & Prints",
+        "subItems": []
+      }, 
+      { 
+        "value": "Small & Medium Business",
+        "subItems": []
+      },
+      { 
+        "value": "Full Store Directory",
+        "subItems": []
+      }
     ]
   },
   {

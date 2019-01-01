@@ -8,6 +8,8 @@
   padding-right: 1rem;
   padding-left: 0;
 
+  position: relative;
+
   &__wrapper {
     display: flex;
     justify-content: center;
@@ -18,8 +20,8 @@
     height: 2.2rem;;
     width: 100%;
 
-    border-radius: .2rem;
     overflow: hidden;
+    border-radius: .2rem;
   }
 
   &__select {
@@ -60,8 +62,40 @@
 
     border: none;
     border-radius: 0;
+    padding-left: 1rem;
+    font-size: .9rem;
 
     outline-color: $amazon-yellow;
+  }
+
+  &__query-container {
+    position: relative;
+  }
+
+  &__results {
+    background-color: white;
+    width: 39.3rem;
+
+    z-index: 90;
+    position: absolute;
+    left: 7.6rem;
+    top: 2.9rem;
+
+    border: 1px solid rgba(#aaa, .8);
+    border-top: none;
+
+    box-shadow: 0px 1px 1px 1px rgba(black, .2);
+
+    &--item {
+      font-size: 1rem;
+      font-weight: 500;
+      padding: .5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color:#eee;
+      }
+    }
   }
 
   &__button {

@@ -9,7 +9,6 @@ const SidebarOverlay = props => (
         alt="close icon"
       />
     </div>
-    {/* <p className="v_sidebar-overlay__button">X</p> */}
   </div>
 );
 

@@ -5,7 +5,7 @@ const { Product } = require('../models/product.model');
 
 // Create 20 categories and 100 products
 const categoryPromises = [];
-const categoryNames = ['electronics', 'clothes', 'video Games', 'appliances', 'books'];
+const categoryNames = ['electronics', 'clothes', 'games', 'appliances', 'books'];
 
 for (let i = 0; i < 5; i++) {
   categoryPromises.push(Category.create({ category: categoryNames[i] }));

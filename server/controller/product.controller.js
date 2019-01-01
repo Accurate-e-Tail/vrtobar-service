@@ -6,8 +6,14 @@ const get = (req, res) => {
   const categoryParam = req.params.category.toLowerCase();
   const { query } = req.params;
 
-  if (categoryParam === 'all') {
-    Product.findAll()
+  if (categoryParam === 'all departments') {
+    Product.findAll({
+      where: {
+        name: {
+          [Sequelize.Op.like]: `%${query.toLowerCase()}%`,
+        },
+      },
+    })
       .then((products) => {
         res.status(200).send({ products });
       })

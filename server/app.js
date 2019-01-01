@@ -2,6 +2,8 @@ const db = require('./db/db');
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -13,6 +15,8 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // MIDDLEWARE
 app.use(morgan('dev'));
+app.use(bodyParser.urlencoded());
+app.use(cors());
 
 // ROUTES
 app.use('/categories', categoriesRouter);

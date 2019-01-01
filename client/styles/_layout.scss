@@ -1,8 +1,9 @@
 .v_layout-main {
-
+  position: relative;
 }
 .v_nav-image-container {
   overflow: hidden;
+  cursor: pointer;
 }
 
 .v_nav-image {
@@ -12,7 +13,7 @@
 .nav-container {
   display: grid;
   grid-template-columns: 15% 56.5% 28.5%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 1fr auto;
 }
 
 .v_logo-section, .v_search-section, .v_ad-section {

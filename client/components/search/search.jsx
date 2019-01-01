@@ -5,12 +5,16 @@ class Search extends React.Component {
     super(props);
     this.state = {
       categories: ['All Departments'],
-      selectValue: '',
+      selectValue: 'All Departments',
+      queryValue: '',
     };
     this.onSelectChange = this.onSelectChange.bind(this);
+    this.onQueryChange = this.onQueryChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentDidMount() {
+    // Fetch categories
     fetch('http://localhost:3003/categories')
       .then(resData => resData.json())
       .then((data) => {
@@ -25,13 +29,29 @@ class Search extends React.Component {
       });
   }
 
+  onSubmit() {
+    // Query server
+    fetch(`http://localhost:3003/products/${this.state.selectValue}/${this.state.queryValue}`)
+      .then(resData => resData.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  onQueryChange(e) {
+    const queryValue = e.target.value;
+    this.setState({ queryValue });
+  }
+
   onSelectChange(e) {
-    console.log(e.target.value);
     this.setState({ selectValue: e.target.value });
   }
 
   render() {
-    const categoriesJSX = this.state.categories.map((category) => {
+    const categoriesJSX = this.state.categories.map((category, index) => {
       return (
         <option className="v_search-section__select--option" value={category}>{category}</option>
       );
@@ -50,8 +70,18 @@ class Search extends React.Component {
             {categoriesJSX}
           </select>
           <i className="arrow-down v_search-section__arrow" />
-          <input className="v_search-section__query" type="text" name="query" />
-          <div className="v_search-section__button" type="button">
+          <input
+            className="v_search-section__query"
+            type="text"
+            name="query"
+            onChange={this.onQueryChange}
+            value={this.state.queryValue}
+          />
+          <div
+            className="v_search-section__button"
+            type="button"
+            onClick={this.onSubmit}
+          >
             <img src="images/search.png" className="v_search-section__button-image" alt="search icon" />
           </div>
         </div>

@@ -5,7 +5,15 @@ const Results = (props) => {
   if (props.products.length > 0) {
     itemsJSX = props.products.slice(0, 10).map((product) => {
       return (
-        <li className="v_search-section__results--item">{product.name}</li>
+        <li
+          key={product.id}
+          className="v_search-section__results--item"
+          onClick={(e) => {
+            props.onProductClick(e, product.id);
+          }}
+        >
+          {product.name}
+        </li>
       );
     });
   } else {

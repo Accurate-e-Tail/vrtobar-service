@@ -1,34 +1,40 @@
 import React from 'react';
 
 import TryDropdown from './TryDropdown.jsx';
+import AccountDropdown from './AccountDropdown.jsx';
 import Overlay from '../shared/Overlay.jsx';
 
 class Account extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHovered: false,
+      isTryHovered: false,
+      isAccountHovered: false,
     };
 
     this.onTryHover = this.onTryHover.bind(this);
     this.toggleHover = this.toggleHover.bind(this);
-  }
-
-  componentDidMount() {
-
-  }
-
-  componentWillUnmount() {
-
+    this.onAccountHover = this.onAccountHover.bind(this);
+    this.toggleAccountHover = this.toggleAccountHover.bind(this);
   }
 
   onTryHover() {
-    this.setState({ isHovered: true });
+    this.setState({ isTryHovered: true });
+  }
+
+  onAccountHover() {
+    this.setState({ isAccountHovered: true });
+  }
+
+  toggleAccountHover() {
+    this.setState(state => ({
+      isAccountHovered: !state.isAccountHovered,
+    }));
   }
 
   toggleHover() {
     this.setState(state => ({
-      isHovered: !state.isHovered,
+      isTryHovered: !state.isTryHovered,
     }));
   }
 
@@ -37,13 +43,14 @@ class Account extends React.Component {
       <React.Fragment>
         <div className="v_account-section">
           <div className="v_account-section__divider" />
-          <div className="v_account-section__holder">
-            <div className="v_account-section__button">
+          <div className="v_account-section__holder v_account-section__account-container">
+            <div className="v_account-section__button" onMouseOver={this.onAccountHover} onMouseLeave={this.toggleAccountHover}>
               <p className="v_account-section__initial-text">Hello, Sign in</p>
               <div className="v_account-section__arrow-container">
                 <p className="v_account-section__secondary-text">Account &amp; Lists</p>
                 <i className="arrow-down" />
               </div>
+              { this.state.isAccountHovered && <AccountDropdown toggleDropdown={this.toggleAccountHover} />}
             </div>
           </div>
           <div className="v_account-section__holder">
@@ -55,7 +62,7 @@ class Account extends React.Component {
             <div className="v_account-section__button v_account-section__arrow-container" onMouseLeave={this.toggleHover}>
               <p className="v_account-section__secondary-text" onMouseOver={this.onTryHover}>Try Prime</p>
               <i className="arrow-down" />
-              { this.state.isHovered && <TryDropdown toggleDropdown={this.toggleHover} />}
+              { this.state.isTryHovered && <TryDropdown toggleDropdown={this.toggleHover} />}
             </div>
           </div>
           <div className="v_account-section__holder">
@@ -74,7 +81,8 @@ class Account extends React.Component {
             </div>
           </div>
         </div>
-        { this.state.isHovered && <Overlay /> }
+        { this.state.isTryHovered && <Overlay /> }
+        { this.state.isAccountHovered && <Overlay /> }
       </React.Fragment>
     );
   }

@@ -16,20 +16,6 @@ class Dropdown extends React.Component {
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleOutsideClick, false);
   }
-
-  handleOutsideClick(e) {
-    if (this.container.contains(e.target)) {
-      return;
-    }
-    // this.props.closeDropdown();
-  }
-
-  render() {
-    return (
-      <div className="v_dropdown" ref={node => this.container = node}>
-      </div>
-    );
-  }
 }
 
 export default Dropdown;

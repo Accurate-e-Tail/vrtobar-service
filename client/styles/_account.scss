@@ -96,7 +96,7 @@
     padding: .8rem;
 
     display: flex;
-
+    cursor: auto;
 
     &--container {
       flex: 1;
@@ -109,36 +109,48 @@
       align-items: center;
     }
 
-    &--logo {
-
+    &--logo-container {
+      margin-top: .5rem;
+      &--image {
+        max-width: 100%;
+        max-height: 4rem;
+      }
     }
 
     &--text-container {
-      margin-bottom: 1rem;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
       &--text {
         font-size: 1.2rem;
+        font-weight: 500;
         color: white;
         text-align: center;
       }
     }
 
     &--button {
+      cursor: pointer;
       width: 5.5rem;
       height: 2.5rem;
-      border-radius: 2px;
+      border-radius: .2rem;
       background-color: $amazon-yellow;
       font-size: 1rem;
       font-weight: 500;
+      color: black;
 
-      box-shadow: 0px 0px 3px 0px rgba(black, .2);
+      box-shadow: 0px 0px 5px 2px rgba(black, .2);
 
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    &--image {
-
+    &--image-container {
+      justify-self: flex-end;
+      &--image {
+        max-width: 100%;
+        max-height: 10rem;
+      }
     }
   }
 }

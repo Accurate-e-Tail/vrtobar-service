@@ -31,3 +31,13 @@ body {
   border-right: .26rem solid transparent;
   border-top: .26rem solid #999;
 }
+
+.v_overlay {
+  position: absolute;
+  top: 100%;
+  z-index: 80;
+
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(black, .4);
+}

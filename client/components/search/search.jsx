@@ -1,4 +1,9 @@
 import React from 'react';
+import _ from 'lodash';
+
+import Results from './Results.jsx';
+import Overlay from '../shared/Overlay.jsx';
+
 
 class Search extends React.Component {
   constructor(props) {
@@ -7,10 +12,14 @@ class Search extends React.Component {
       categories: ['All Departments'],
       selectValue: 'All Departments',
       queryValue: '',
+      searchResults: [],
+      queryFocused: false,
     };
     this.onSelectChange = this.onSelectChange.bind(this);
     this.onQueryChange = this.onQueryChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onSubmit = _.throttle(this.onSubmit.bind(this), 500);
+    this.onQueryFocusIn = this.onQueryFocusIn.bind(this);
+    this.onQueryFocusOut = this.onQueryFocusOut.bind(this);
   }
 
   componentDidMount() {
@@ -29,21 +38,35 @@ class Search extends React.Component {
       });
   }
 
-  onSubmit() {
+  onSubmit(query) {
     // Query server
-    fetch(`http://localhost:3003/products/${this.state.selectValue}/${this.state.queryValue}`)
-      .then(resData => resData.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (query !== '') {
+      fetch(`http://localhost:3003/products/${this.state.selectValue}/${query}`)
+        .then(resData => resData.json())
+        .then((data) => {
+          console.log(data);
+          this.setState({ searchResults: data.products });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }
 
   onQueryChange(e) {
     const queryValue = e.target.value;
-    this.setState({ queryValue });
+    this.setState((state) => {
+      this.onSubmit(queryValue);
+      return { queryValue };
+    });
+  }
+
+  onQueryFocusIn(e) {
+    this.setState({ queryFocused: true });
+  }
+
+  onQueryFocusOut(e) {
+    this.setState({ queryFocused: false });
   }
 
   onSelectChange(e) {
@@ -58,34 +81,39 @@ class Search extends React.Component {
     });
 
     return (
-      <div className="v_search-section">
-        <div className="v_search-section__wrapper">
-          <select
-            className="v_search-section__select"
-            type="select"
-            name="category"
-            value={this.state.selectValue}
-            onChange={this.onSelectChange}
-          >
-            {categoriesJSX}
-          </select>
-          <i className="arrow-down v_search-section__arrow" />
-          <input
-            className="v_search-section__query"
-            type="text"
-            name="query"
-            onChange={this.onQueryChange}
-            value={this.state.queryValue}
-          />
-          <div
-            className="v_search-section__button"
-            type="button"
-            onClick={this.onSubmit}
-          >
-            <img src="images/search.png" className="v_search-section__button-image" alt="search icon" />
+      <React.Fragment>
+        <div className="v_search-section">
+          <div className="v_search-section__wrapper">
+            <select
+              className="v_search-section__select"
+              type="select"
+              name="category"
+              value={this.state.selectValue}
+              onChange={this.onSelectChange}
+            >
+              {categoriesJSX}
+            </select>
+            <i className="arrow-down v_search-section__arrow" />
+            <input
+              className="v_search-section__query"
+              type="text"
+              name="query"
+              onChange={this.onQueryChange}
+              value={this.state.queryValue}
+              onFocus={this.onQueryFocusIn}
+              onBlur={this.onQueryFocusOut}
+            />
+            <div
+              className="v_search-section__button"
+              type="button"
+            >
+              <img src="images/search.png" className="v_search-section__button-image" alt="search icon" />
+            </div>
           </div>
+          { this.state.queryFocused && <Results products={this.state.searchResults} /> }
         </div>
-      </div>
+        { this.state.queryFocused && <Overlay />}
+      </React.Fragment>
     );
   }
 }

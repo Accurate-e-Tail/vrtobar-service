@@ -47,28 +47,27 @@ class Search extends React.Component {
     document.removeEventListener('mousedown', this.handleOutsideClick, false);
   }
 
-  
   onProductClick(e, id) {
     console.log(`Redirect: Product id = ${id}`);
   }
-  
+
   onSubmit(query) {
     // Query server
     if (query !== '') {
       fetch(`http://localhost:3003/products/${this.state.selectValue}/${query}`)
-      .then(resData => resData.json())
-      .then((data) => {
-        console.log(data);
-        this.setState({ searchResults: data.products });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+        .then(resData => resData.json())
+        .then((data) => {
+          console.log(data);
+          this.setState({ searchResults: data.products });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } else {
       this.setState({ searchResults: [] });
     }
   }
-  
+
   onQueryChange(e) {
     const queryValue = e.target.value;
     this.setState((state) => {

@@ -14,7 +14,10 @@
   width: 25%;
   overflow: scroll;
   box-shadow: 10px 0px 5px -2px rgba(black, .2);
-  
+
+  animation-name: slide;
+  animation-duration: .5s;
+
   &__header {
     height: 3.2rem;
     padding-left: 4.5rem;
@@ -26,6 +29,9 @@
     position: absolute;
     width: 25%;
     height: 3rem;
+
+    // animation-name: slide;
+    // animation-duration: .1s;
 
     background-image: url(images/account.png);
     background-repeat: no-repeat;
@@ -120,4 +126,9 @@
   &:hover {
     background-image: url(images/forward-dark.png);
   }
+}
+
+@keyframes slide {
+  from {width: 0px;}
+  to {width: 25%;}
 }

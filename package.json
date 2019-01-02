@@ -9,7 +9,9 @@
   },
   "scripts": {
     "build": "webpack --mode development --watch",
+    "schema": "mysql -u student < server/db/schema.sql -p",
     "test-server": "jest --config ./server/tests/jest.config.json --detectOpenHandles",
+    "seed": "node server/db/seed.js",
     "test-react": "jest --config ./client/tests/jest.config.json",
     "start": "nodemon server/server.js"
   },

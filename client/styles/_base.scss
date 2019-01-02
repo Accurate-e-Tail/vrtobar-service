@@ -41,3 +41,13 @@ body {
   width: 100vw;
   background-color: rgba(black, .4);
 }
+
+.v_dropdown {
+  background-color: white;
+
+  z-index: 90;
+  border: 1px solid rgba(#aaa, .8);
+  border-top: none;
+
+  box-shadow: 0px 1px 1px 1px rgba(black, .2);
+}

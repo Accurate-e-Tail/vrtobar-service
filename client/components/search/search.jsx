@@ -132,7 +132,11 @@ class Search extends React.Component {
               className="v_search-section__button"
               type="button"
             >
-              <img src="images/search.png" className="v_search-section__button-image" alt="search icon" />
+              <img
+                src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/search.png"
+                className="v_search-section__button-image"
+                alt="search icon"
+              />
             </div>
           </div>
           { this.state.queryFocused && <Results products={this.state.searchResults} onProductClick={this.onProductClick} /> }

@@ -27,7 +27,13 @@ class Layout extends React.Component {
     return (
       <div className="v_layout-main">
         {this.state.isOpen && <Sidebar toggleSidebar={this.toggleSidebar} />}
-        <div className="v_nav-image-container"><img className="v_nav-image" src="images/nav_image.jpg" alt="" /></div>
+        <div className="v_nav-image-container">
+          <img
+            className="v_nav-image"
+            src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/nav_image.jpg"
+            alt="nav icon"
+          />
+        </div>
         <div className="nav-container">
           <Logo toggleSidebar={this.toggleSidebar} />
           <Search />

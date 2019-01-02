@@ -33,7 +33,7 @@
     // animation-name: slide;
     // animation-duration: .1s;
 
-    background-image: url(images/account.png);
+    background-image: url(https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/account.png);
     background-repeat: no-repeat;
     background-position-x: 2.1rem;
     background-position-y: 50%;
@@ -57,7 +57,7 @@
       padding-left: 4.2rem;
       margin-top: 3rem;
 
-      background-image: url(images/back-light.png);
+      background-image: url(https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/back-light.png);
       background-repeat: no-repeat;
       background-position-x: 2.1rem;
       background-position-y: 50%;
@@ -65,7 +65,7 @@
 
       &:hover {
         cursor: pointer;
-        background-image: url(images/back-dark.png);
+        background-image: url(https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/back-dark.png);
         background-color: rgba(#949494, .15);
       }
     }
@@ -117,14 +117,14 @@
 }
 
 .has-sub-menus {
-  background-image: url(images/forward-light.png);
+  background-image: url(https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/forward-light.png);
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: 50%;
   background-size: 1.3rem;
 
   &:hover {
-    background-image: url(images/forward-dark.png);
+    background-image: url(https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/forward-dark.png);
   }
 }
 

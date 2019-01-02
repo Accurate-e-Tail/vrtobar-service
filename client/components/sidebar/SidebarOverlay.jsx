@@ -5,7 +5,7 @@ const SidebarOverlay = props => (
     <div className="v_sidebar-overlay__image-container">
       <img
         className="v_sidebar-overlay__image-container--image"
-        src="images/close.png"
+        src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/close.png"
         alt="close icon"
       />
     </div>

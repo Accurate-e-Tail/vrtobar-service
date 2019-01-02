@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Amazon Profile Page Clone
 
 ## Related Projects
 
@@ -17,7 +17,10 @@
 
 ## Usage
 
-> Some usage instructions
+> Run: server/db/schema.sql
+> Run: node server/db/db.js
+> npm run build
+> npm start
 
 ## Requirements
 
@@ -33,7 +36,6 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
 

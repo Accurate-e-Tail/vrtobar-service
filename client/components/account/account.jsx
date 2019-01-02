@@ -85,7 +85,7 @@ class Account extends React.Component {
                   <p className="v_account-section__cart--count">0</p>
                   <img
                     className="v_account-section__cart--image"
-                    src="images/cart.png"
+                    src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/cart.png"
                     alt="cart icon"
                   />
                 </div>

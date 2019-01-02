@@ -10,12 +10,19 @@ class Account extends React.Component {
     this.state = {
       isTryHovered: false,
       isAccountHovered: false,
+      isLangHovered: false,
     };
 
     this.onTryHover = this.onTryHover.bind(this);
     this.toggleHover = this.toggleHover.bind(this);
     this.onAccountHover = this.onAccountHover.bind(this);
     this.toggleAccountHover = this.toggleAccountHover.bind(this);
+    this.onLangHover = this.onLangHover.bind(this);
+    this.toggleLangHover = this.toggleLangHover.bind(this);
+  }
+
+  onLangHover() {
+    this.setState({ isLangHovered: true });
   }
 
   onTryHover() {
@@ -24,6 +31,12 @@ class Account extends React.Component {
 
   onAccountHover() {
     this.setState({ isAccountHovered: true });
+  }
+
+  toggleLangHover() {
+    this.setState(state => ({
+      isLangHovered: !state.isLangHovered,
+    }));
   }
 
   toggleAccountHover() {

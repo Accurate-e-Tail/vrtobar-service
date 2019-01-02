@@ -40,6 +40,7 @@
     border: 1px solid $amazon-blue;
     cursor: pointer;
     padding: .3rem;
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -68,6 +69,43 @@
     &--image {
       max-width: 75%;
       max-height: 75%;
+    }
+  }
+
+  &__lang-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem;
+
+    padding: 1rem;
+
+    &--container {
+      display: flex;
+      flex-direction: column;
+
+      &--item {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      &--text {
+        font-size: .85rem;
+        padding-left: .7rem;
+        padding-bottom: .3rem;
+        border-bottom: 1px solid $color-divisor;
+      }
+
+      &--link {
+        color: rgb(40, 107, 216);
+        font-size: .8rem;
+        padding-left: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: $amazon-yellow;
+        }
+      }
     }
   }
 }

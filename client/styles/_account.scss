@@ -90,11 +90,10 @@
 
   &__account-dropdown {
     position: absolute;
-    width: 27.5rem;
-    // height: 35rem;
+    width: 30rem;
     top: 100%;
     left: -150%;
-    padding: .8rem;
+    padding: .8rem 1.2rem;
 
     display: flex;
     flex-direction: column;
@@ -110,12 +109,12 @@
 
       &--button {
         cursor: pointer;
-        width: 5.5rem;
-        height: 2.5rem;
+        width: 11rem;
+        height: 2rem;
         border-radius: .2rem;
         background-color: $amazon-yellow;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 300;
         color: black;
         margin-bottom: 1rem;
   

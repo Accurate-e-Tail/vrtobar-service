@@ -44,7 +44,11 @@ class Links extends React.Component {
             <div className="v_links-section__lang--text">EN</div>
             <div className="v_links-section__lang--bottom">
               <div className="v_links-section__lang--image-container">
-                <img className="v_links-section__lang--image" src="images/globe.png" alt="globe icon" />
+                <img
+                  className="v_links-section__lang--image"
+                  src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/globe.png"
+                  alt="globe icon"
+                />
               </div>
               <i className="arrow-down" />
             </div>

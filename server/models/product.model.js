@@ -12,10 +12,6 @@ const Product = connection.define('product', {
     type: Sequelize.TEXT,
     allowNull: false,
   },
-  image: {
-    type: Sequelize.STRING,
-    defaultValue: '',
-  },
 });
 
 Product.belongsTo(Category);

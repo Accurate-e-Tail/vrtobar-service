@@ -7,7 +7,7 @@ const TryDropdown = (props) => {
         <div className="v_account-section__try-dropdown--logo-container">
           <img
             className="v_account-section__try-dropdown--logo-container--image"
-            src="images/prime-white.png"
+            src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/prime-white.png"
             alt="prime icon"
           />
         </div>
@@ -20,7 +20,7 @@ const TryDropdown = (props) => {
         <div className="v_account-section__try-dropdown--image-container">
           <img
             className="v_account-section__try-dropdown--image-container--image"
-            src="images/fox.png"
+            src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/fox.png"
             alt="fox icon"
           />
         </div>

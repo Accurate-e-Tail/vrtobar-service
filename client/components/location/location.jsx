@@ -6,7 +6,7 @@ const Location = (props) => {
       <div className="v_location-section__button">
         <div className="v_location-section__image-container">
           <img
-            src="images/location.png"
+            src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/location.png"
             alt="location icon"
             className="v_location-section__image-container--image"
           />

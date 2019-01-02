@@ -10,7 +10,11 @@ const Logo = (props) => {
       </div>
       <div className="v_logo-section__logo">
         <div className="v_logo-section__logo--image-container">
-          <img src="images/logo.png" alt="logo icon" className="v_logo-section__logo--image-container--image" />
+          <img
+            src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/logo.png"
+            alt="logo icon"
+            className="v_logo-section__logo--image-container--image"
+          />
         </div>
       </div>
       <div className="v_logo-section__try">

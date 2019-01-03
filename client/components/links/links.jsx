@@ -14,12 +14,12 @@ class Links extends React.Component {
   }
 
   onLangHover() {
-    this.props.toggleOverlay();
+    this.props.toggleOverlay(true);
     this.setState({ isLangHovered: true });
   }
 
   onLangHoverLeave() {
-    this.props.toggleOverlay();
+    this.props.toggleOverlay(false);
     this.setState(state => ({
       isLangHovered: false,
     }));
@@ -56,7 +56,6 @@ class Links extends React.Component {
             { this.state.isLangHovered && <LanguageDropdown /> }
           </div>
         </div>
-        {/* { this.state.isLangHovered && <Overlay /> } */}
       </React.Fragment>
     );
   }

@@ -33,24 +33,24 @@ class Account extends React.Component {
   }
 
   onTryHover() {
-    this.props.toggleOverlay();
+    this.props.toggleOverlay(true);
     this.setState({ isTryHovered: true });
   }
 
   onAccountHover() {
-    this.props.toggleOverlay();
+    this.props.toggleOverlay(true);
     this.setState({ isAccountHovered: true });
   }
 
   toggleAccountHover() {
-    this.props.toggleOverlay();
+    this.props.toggleOverlay(false);
     this.setState(state => ({
       isAccountHovered: !state.isAccountHovered,
     }));
   }
 
   toggleHover() {
-    this.props.toggleOverlay();
+    this.props.toggleOverlay(false);
     this.setState(state => ({
       isTryHovered: !state.isTryHovered,
     }));
@@ -62,7 +62,7 @@ class Account extends React.Component {
         <div className="v_account-section">
           <div className="v_account-section__divider" />
           <div className="v_account-section__holder v_account-section__account-container">
-            <div className="v_account-section__button" onMouseOver={this.onAccountHover} onMouseLeave={this.toggleAccountHover}>
+            <div className="v_account-section__button" onMouseEnter={this.onAccountHover} onMouseLeave={this.toggleAccountHover}>
               <p className="v_account-section__initial-text">Hello, Sign in</p>
               <div className="v_account-section__arrow-container">
                 <p className="v_account-section__secondary-text">Account &amp; Lists</p>
@@ -78,7 +78,7 @@ class Account extends React.Component {
           </div>
           <div className="v_account-section__holder v_account-section__try-container">
             <div className="v_account-section__button v_account-section__arrow-container" onMouseLeave={this.toggleHover}>
-              <p className="v_account-section__secondary-text" onMouseOver={this.onTryHover}>Try Prime</p>
+              <p className="v_account-section__secondary-text" onMouseEnter={this.onTryHover}>Try Prime</p>
               <i className="arrow-down" />
               { this.state.isTryHovered && <TryDropdown toggleDropdown={this.toggleHover} />}
             </div>

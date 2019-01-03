@@ -124,6 +124,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+          background-image: linear-gradient(to bottom, darken($amazon-yellow, 5%), darken(#f2cb6d, 5%));
+        }
       }
 
       &--text {
@@ -245,6 +249,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &:hover {
+        background-image: linear-gradient(to bottom, darken($amazon-yellow, 5%), darken(#f2cb6d, 5%));
+      }
     }
 
     &--image-container {

@@ -6,16 +6,16 @@
 
   &__list {
     display: flex;
+    justify-content: space-evenly;
     flex: 1;
 
     &--item {
       font-size: .75rem;
-      margin-right: 1rem;
       padding: .7rem 0;
-      border-bottom: 1px solid #fafafa;
+      border-bottom: 2px solid #fafafa;
       cursor: pointer;
 
-      &:first-child {
+      &:first-of-type {
         font-weight: 500;
         font-size: .8rem;
       }
@@ -23,7 +23,7 @@
       &:hover {
         color: $amazon-orange;
         text-decoration-color: $amazon-orange;
-        border-bottom: 1px solid $amazon-orange;
+        border-bottom: 2px solid $amazon-orange;
       }
     }
   }

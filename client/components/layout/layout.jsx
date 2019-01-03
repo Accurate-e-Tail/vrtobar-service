@@ -28,9 +28,9 @@ class Layout extends React.Component {
     }));
   }
 
-  toggleOverlay() {
+  toggleOverlay(value) {
     this.setState(state => ({
-      isOverlayOpen: !state.isOverlayOpen,
+      isOverlayOpen: value,
     }));
   }
 

@@ -1,0 +1,30 @@
+.v_categories-section {
+  border-top: 1px solid rgba(black, .17);
+  border-bottom: 1px solid rgba(black ,.1);
+  padding: 0 1rem;
+  background-color: #fafafa;
+
+  &__list {
+    display: flex;
+    flex: 1;
+
+    &--item {
+      font-size: .75rem;
+      margin-right: 1rem;
+      padding: .7rem 0;
+      cursor: pointer;
+
+      &:first-child {
+        font-weight: 500;
+        font-size: .8rem;
+      }
+
+      &:hover {
+        color: $amazon-orange;
+        // text-decoration: underline;
+        text-decoration-color: $amazon-orange;
+        border-bottom: 1px solid $amazon-orange;
+      }
+    }
+  }
+}

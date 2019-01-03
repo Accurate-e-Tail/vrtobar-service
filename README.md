@@ -17,8 +17,10 @@
 
 ## Usage
 
-> Run: server/db/schema.sql
-> Run: node server/db/db.js
+> Update package.json "schema" script with correct database user
+> Update /server/db/db.js with correct database user and password
+> npm run schema
+> npm run seed
 > npm run build
 > npm start
 

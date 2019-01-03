@@ -51,9 +51,9 @@ class Layout extends React.Component {
           <Ad />
           <Location />
           <Links toggleOverlay={this.toggleOverlay} />
-          <Account />
+          <Account toggleOverlay={this.toggleOverlay} />
+          { this.state.isOverlayOpen && <Overlay /> }
         </div>
-        { this.state.isOverlayOpen && <Overlay /> }
         <div className="v_categories-container">
           <Categories />
         </div>

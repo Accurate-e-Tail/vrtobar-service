@@ -11,6 +11,7 @@ class Account extends React.Component {
       isTryHovered: false,
       isAccountHovered: false,
       isLangHovered: false,
+      cartCount: 0,
     };
 
     this.onTryHover = this.onTryHover.bind(this);
@@ -19,6 +20,20 @@ class Account extends React.Component {
     this.toggleAccountHover = this.toggleAccountHover.bind(this);
     this.onLangHover = this.onLangHover.bind(this);
     this.toggleLangHover = this.toggleLangHover.bind(this);
+  }
+
+  componentDidMount() {
+    // Fetch cart count
+    setInterval(() => {
+      fetch('http://localhost:3002/cart')
+        .then(resData => resData.json())
+        .then((data) => {
+          this.setState({ cartCount: data.length });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }, 1000);
   }
 
   onLangHover() {
@@ -82,7 +97,7 @@ class Account extends React.Component {
             <div className="v_account-section__button">
               <div className="v_account-section__cart">
                 <div className="v_account-section__cart--image-container">
-                  <p className="v_account-section__cart--count">0</p>
+                  <p className="v_account-section__cart--count">{this.state.cartCount}</p>
                   <img
                     className="v_account-section__cart--image"
                     src="https://s3-us-west-1.amazonaws.com/hack-reactor-victor/fec-images/cart.png"

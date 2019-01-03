@@ -7,6 +7,7 @@ import Location from '../location/location.jsx';;
 import Logo from '../logo/logo.jsx';
 import Search from '../Search/search.jsx';
 import Sidebar from '../sidebar/sidebar.jsx';
+import Categories from '../categories/Categories.jsx';
 
 class Layout extends React.Component {
   constructor(props) {
@@ -41,6 +42,9 @@ class Layout extends React.Component {
           <Location />
           <Links />
           <Account />
+        </div>
+        <div className="v_categories-container">
+          <Categories />
         </div>
       </div>
     );

@@ -1,0 +1,12 @@
+.v_banner-section {
+  height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &__image {
+    cursor: pointer;
+    max-height: 100%;
+  }
+}

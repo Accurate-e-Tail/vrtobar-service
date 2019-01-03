@@ -4,7 +4,6 @@ import _ from 'lodash';
 import Results from './Results.jsx';
 import Overlay from '../shared/Overlay.jsx';
 
-
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -48,7 +47,7 @@ class Search extends React.Component {
   }
 
   onProductClick(e, id) {
-    console.log(`Redirect: Product id = ${id}`);
+    window.location.href = `http://localhost:3000/${id}`;
   }
 
   onSubmit(query) {

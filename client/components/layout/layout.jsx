@@ -8,19 +8,29 @@ import Logo from '../logo/logo.jsx';
 import Search from '../Search/search.jsx';
 import Sidebar from '../sidebar/sidebar.jsx';
 import Categories from '../categories/Categories.jsx';
+import Banner from '../banner/Banner.jsx';
+import Overlay from '../shared/Overlay.jsx';
 
 class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
+      isOverlayOpen: false,
     };
     this.toggleSidebar = this.toggleSidebar.bind(this);
+    this.toggleOverlay = this.toggleOverlay.bind(this);
   }
 
   toggleSidebar() {
     this.setState(state => ({
       isOpen: !state.isOpen,
+    }));
+  }
+
+  toggleOverlay() {
+    this.setState(state => ({
+      isOverlayOpen: !state.isOverlayOpen,
     }));
   }
 
@@ -40,12 +50,14 @@ class Layout extends React.Component {
           <Search />
           <Ad />
           <Location />
-          <Links />
-          <Account />
+          <Links toggleOverlay={this.toggleOverlay} />
+          <Account toggleOverlay={this.toggleOverlay} />
+          { this.state.isOverlayOpen && <Overlay /> }
         </div>
         <div className="v_categories-container">
           <Categories />
         </div>
+        <Banner />
       </div>
     );
   }

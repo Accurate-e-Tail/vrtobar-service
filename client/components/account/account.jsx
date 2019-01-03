@@ -2,7 +2,6 @@ import React from 'react';
 
 import TryDropdown from './TryDropdown.jsx';
 import AccountDropdown from './AccountDropdown.jsx';
-import Overlay from '../shared/Overlay.jsx';
 
 class Account extends React.Component {
   constructor(props) {
@@ -10,7 +9,6 @@ class Account extends React.Component {
     this.state = {
       isTryHovered: false,
       isAccountHovered: false,
-      isLangHovered: false,
       cartCount: 0,
     };
 
@@ -18,8 +16,6 @@ class Account extends React.Component {
     this.toggleHover = this.toggleHover.bind(this);
     this.onAccountHover = this.onAccountHover.bind(this);
     this.toggleAccountHover = this.toggleAccountHover.bind(this);
-    this.onLangHover = this.onLangHover.bind(this);
-    this.toggleLangHover = this.toggleLangHover.bind(this);
   }
 
   componentDidMount() {
@@ -36,31 +32,25 @@ class Account extends React.Component {
     }, 1000);
   }
 
-  onLangHover() {
-    this.setState({ isLangHovered: true });
-  }
-
   onTryHover() {
+    this.props.toggleOverlay();
     this.setState({ isTryHovered: true });
   }
 
   onAccountHover() {
+    this.props.toggleOverlay();
     this.setState({ isAccountHovered: true });
   }
 
-  toggleLangHover() {
-    this.setState(state => ({
-      isLangHovered: !state.isLangHovered,
-    }));
-  }
-
   toggleAccountHover() {
+    this.props.toggleOverlay();
     this.setState(state => ({
       isAccountHovered: !state.isAccountHovered,
     }));
   }
 
   toggleHover() {
+    this.props.toggleOverlay();
     this.setState(state => ({
       isTryHovered: !state.isTryHovered,
     }));
@@ -109,8 +99,6 @@ class Account extends React.Component {
             </div>
           </div>
         </div>
-        { this.state.isTryHovered && <Overlay /> }
-        { this.state.isAccountHovered && <Overlay /> }
       </React.Fragment>
     );
   }

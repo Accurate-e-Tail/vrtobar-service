@@ -1,7 +1,6 @@
 import React from 'react';
 
 import LanguageDropdown from './LanguageDropdown.jsx';
-import Overlay from '../shared/Overlay.jsx';
 
 class Links extends React.Component {
   constructor(props) {
@@ -11,16 +10,18 @@ class Links extends React.Component {
     };
 
     this.onLangHover = this.onLangHover.bind(this);
-    this.toggleLangHover = this.toggleLangHover.bind(this);
+    this.onLangHoverLeave = this.onLangHoverLeave.bind(this);
   }
 
   onLangHover() {
+    this.props.toggleOverlay();
     this.setState({ isLangHovered: true });
   }
 
-  toggleLangHover() {
+  onLangHoverLeave() {
+    this.props.toggleOverlay();
     this.setState(state => ({
-      isLangHovered: !state.isLangHovered,
+      isLangHovered: false,
     }));
   }
 
@@ -38,8 +39,8 @@ class Links extends React.Component {
             <li className="v_links-section__item"><a href="#">Help</a></li>
           </ul>
           <div className="v_links-section__lang"
-            onMouseOver={this.onLangHover}
-            onMouseLeave={this.toggleLangHover}
+            onMouseEnter={this.onLangHover}
+            onMouseLeave={this.onLangHoverLeave}
           >
             <div className="v_links-section__lang--text">EN</div>
             <div className="v_links-section__lang--bottom">
@@ -55,7 +56,7 @@ class Links extends React.Component {
             { this.state.isLangHovered && <LanguageDropdown /> }
           </div>
         </div>
-        { this.state.isLangHovered && <Overlay /> }
+        {/* { this.state.isLangHovered && <Overlay /> } */}
       </React.Fragment>
     );
   }

@@ -21,7 +21,7 @@ class Account extends React.Component {
   componentDidMount() {
     // Fetch cart count
     setInterval(() => {
-      fetch('http://localhost:3002/cart')
+      fetch('http://13.52.101.124/cart')
         .then(resData => resData.json())
         .then((data) => {
           this.setState({ cartCount: data.length });

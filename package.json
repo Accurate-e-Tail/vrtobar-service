@@ -9,11 +9,13 @@
   },
   "scripts": {
     "build": "webpack --mode development --watch",
-    "schema": "mysql -u student < server/db/schema.sql -p",
+    "build:production": "webpack --mode production",
+    "schema": "mysql -u root < server/db/schema.sql",
     "test-server": "jest --config ./server/tests/jest.config.json --detectOpenHandles",
     "seed": "node server/db/seed.js",
     "test-react": "jest --config ./client/tests/jest.config.json",
-    "start": "nodemon server/server.js"
+    "start": "node server/server.js",
+    "docker-start": "node server/server-docker.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -38,7 +40,6 @@
     "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^22.1.2",
     "eslint-plugin-jsx-a11y": "^6.1.2",

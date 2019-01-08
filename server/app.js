@@ -1,4 +1,3 @@
-const db = require('./db/db');
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
@@ -14,7 +13,7 @@ const productsRouter = require('./routes/product.routes');
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // MIDDLEWARE
-app.use(morgan('dev'));
+app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded());
 app.use(cors());
 

@@ -1,3 +1,4 @@
+console.log('CATEGORY.MODEL.JS');
 const Sequelize = require('sequelize');
 
 const { connection } = require('../db/db');
@@ -13,7 +14,7 @@ const Category = connection.define('category', {
   },
 });
 
-Category.sync();
+Category.sync({ force: true });
 
 module.exports = {
   Category,

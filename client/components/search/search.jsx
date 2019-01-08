@@ -28,7 +28,7 @@ class Search extends React.Component {
     document.addEventListener('mousedown', this.handleOutsideClick, false);
 
     // Fetch categories
-    fetch('http://localhost:3003/categories')
+    fetch('http://18.224.40.186/categories')
       .then(resData => resData.json())
       .then((data) => {
         const newCategories = data.categories.map(
@@ -47,13 +47,13 @@ class Search extends React.Component {
   }
 
   onProductClick(e, id) {
-    window.location.href = `http://localhost:3000/${id}`;
+    window.location.href = `http://13.57.232.146/${id}`;
   }
 
   onSubmit(query) {
     // Query server
     if (query !== '') {
-      fetch(`http://localhost:3003/products/${this.state.selectValue}/${query}`)
+      fetch(`http://18.224.40.186/products/${this.state.selectValue}/${query}`)
         .then(resData => resData.json())
         .then((data) => {
           console.log(data);

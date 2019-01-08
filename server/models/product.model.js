@@ -16,7 +16,7 @@ const Product = connection.define('product', {
 
 Product.belongsTo(Category);
 
-Product.sync();
+Product.sync({ force: true });
 
 module.exports = {
   Product,

@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
-const connection = new Sequelize('amazon_dev', 'student', 'student', {
-  host: 'localhost',
+const connection = new Sequelize('amazon_dev', 'root', 'student', {
+  host: 'database',
   dialect: 'mysql',
   logging: false,
 });

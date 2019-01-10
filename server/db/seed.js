@@ -14,66 +14,6 @@ const sequelize = new Sequelize('amazon', 'root', 'student', {
   }
 })
 
-// // const Product = ProductModel(sequelize, Sequelize)
-
-// // const CategoryTag = sequelize.define('category_tag', {})
-// // const Category = CategoryModel(sequelize, Sequelize)
-
-// // Category.belongsToMany(Product, {through: CategoryTag, unique: false})
-
-
-
-// // sequelize.sync({force: true})
-// //   .then(()=> {
-// //     console.log('Database and tables created!');
-// //   })
-
-
-// // Create 20 categories and 100 products
-// const categoryPromises = [];
-// const categoryNames = ['electronics', 'clothes', 'games', 'appliances', 'books'];
-
-// for (let i = 0; i < 5; i++) {
-//   categoryPromises.push(Category.create({ category: categoryNames[i] }));
-// }
-
-// Promise.all(categoryPromises)
-//   .then((categories) => {
-//     const productPromises = [];
-//     let productName;
-
-//     for (let i = 0; i < categories.length; i++) {
-//       for (let j = 1; j <= 20; j++) {
-//         productName = faker.commerce.productName();
-//         productPromises.push(Product.create({
-//           name: productName.toLowerCase(),
-//           categoryId: categories[i].id,
-//         }));
-//       }
-//     }
-
-//     Promise.all(productPromises)
-//       .then((products) => {
-//         console.log(`Created ${products.length} products BLEH BLEH BLEH.`);
-//       })
-//       .catch(err => console.log('Error: Products', err));
-//   })
-//   .catch(err => console.log('Error: Categories', err));
-  // .then(()=> {
-  //   sequelize.query('COPY products FROM ‘./my.csv’ WITH FORMAT csv', {
-  //     model: ProductModel,
-  //     mapToModel: true // pass true here if you have any mapped fields
-  //   })
-  // }).then(projects => {
-  //   // Each record will now be an instance of Project
-  //   console.log(projects);
-  // })
-
-  // module.exports = {
-  //   Product,
-  //   Category
-  // }
-
 const faker = require('faker');
 
 // const { Category } = require('../models/category.model');
@@ -103,31 +43,58 @@ for (let i = 0; i < 5; i++) {
 
 Promise.all(categoryPromises)
   .then((categories) => {
-    const productPromises = [];
+    // const productPromises = [];
+    const products = [];
     let productName;
 
     for (let i = 0; i < categories.length; i++) {
       for (let j = 1; j <= 10000; j++) {
         productName = faker.commerce.productName();
         productDescription = faker.lorem.paragraph();
-        productPromises.push(Product.create({
+        // productPromises.push(Product.create({
+        //   name: productName.toLowerCase(),
+        //   categoryId: categories[i].id,
+        // }));
+        products.push({
           name: productName.toLowerCase(),
           categoryId: categories[i].id,
-        }));
+        })
       }
     }
-
-  // Product.bulkCreate(productPromises)
-  //   .then(() => { // Notice: There are no arguments here, as of right now you'll have to...
-  //   return Product.findAll();
-  // }).then(products => {
-  //   console.log("ppppppppppppppppp", products) // ... in order to get the array of user objects
-  // })
-
-    Promise.all(productPromises)
-      .then((products) => {
-        console.log(`Created ${products.length} products.`);
-      })
-      .catch(err => console.log('Error: Products', err));
+    return products;
+      
   })
-  .catch(err => console.log('Error: Categories', err));
+  .then((products) => {
+    // for (var i = 0; i < 20; i++) {
+      console.log("BULK CREATE IS RUNNING")
+      Product.bulkCreate(products);
+      console.log("BULK CREATE IS RUNNING 2")
+    // }
+    return products;
+  })
+  .then((products) => {
+    // for (var i = 0; i < 20; i++) {
+      console.log("BULK CREATE IS RUNNING second round")
+      Product.bulkCreate(products);
+      console.log("BULK CREATE IS RUNNING second round")
+    // }
+    return products;
+  })
+  .catch(err => console.log('Error: Categories', err))
+
+
+  // const createProducts = async() => {
+  //   try {
+  //     let myproducts = await(Promise.all(categoryPromises))
+  //     await Product.bulkCreate(myproducts);
+  //     console.log('inserted batch 1')
+  //     await Product.bulkCreate(myproducts);
+  //     await Product.bulkCreate(myproducts);
+  //   } catch (err) {
+  //     console.l
+  //   } finally {
+  //     process.exit()
+  //   }
+  // }
+
+  // createProducts();

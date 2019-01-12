@@ -1,20 +1,30 @@
 const Sequelize = require('sequelize');
 
-const { connection } = require('../db/db');
+// const { connection } = require('../db/db');
 
-const Category = connection.define('category', {
+// const Category = connection.define('category', {
+//   category: {
+//     type: Sequelize.STRING,
+//     allowNull: false,
+//   },
+//   image: {
+//     type: Sequelize.STRING,
+//     defaultValue: '',
+//   },
+// });
+
+// Category.sync();
+
+// module.exports = {
+//   Category,
+// };
+
+
+module.exports = (sequelize, type) => {
+  return sequelize.define('category', {
   category: {
     type: Sequelize.STRING,
     allowNull: false,
-  },
-  image: {
-    type: Sequelize.STRING,
-    defaultValue: '',
-  },
-});
-
-Category.sync();
-
-module.exports = {
-  Category,
-};
+  }
+  });
+}

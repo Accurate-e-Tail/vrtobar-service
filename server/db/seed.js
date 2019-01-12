@@ -97,46 +97,6 @@ Promise.all(categoryPromises)
         var numInserted = i * 500000
         console.log('now have inserted ', numInserted);
       }
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('inserted 500,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,000,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,500,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 2,000,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 2,500,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 3,000,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 3,500,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 4,000,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 4,500,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 5,000,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 5,500,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 6,000,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,300,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,400,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,500,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,600,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,700,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,800,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 1,900,000')
-      // await Product.bulkCreate(productsGlobal);
-      // console.log('...now have inserted 2,000,000')
       const endTime = Date.now()
       var timeDiff= new Date(endTime - startTime);
       console.log("End Time: ", endTime);
@@ -152,3 +112,5 @@ Promise.all(categoryPromises)
 
   //Wed Dec 31 1969 16:14:38 GMT-0800 (Pacific Standard Time)
   // (1547152482708 - 1547151603869)
+
+  module.exports = sequelize;

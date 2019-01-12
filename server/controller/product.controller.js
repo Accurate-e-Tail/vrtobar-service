@@ -96,10 +96,23 @@ const update = (req, res, next) => {
 
 }
 
+const del = (req, res) => {
+
+  Product.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(() => {
+    res.send('done');
+  })
+}
+
 
 
 module.exports = {
   get,
   post, 
-  update
+  update,
+  del
 };

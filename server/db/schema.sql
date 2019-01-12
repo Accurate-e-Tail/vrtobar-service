@@ -1,5 +1,5 @@
-DROP DATABASE if exists amazon_dev;
+DROP DATABASE if exists amazon;
 
-CREATE DATABASE amazon_dev;
+CREATE DATABASE amazon;
 
-USE amazon_dev;
+USE amazon;

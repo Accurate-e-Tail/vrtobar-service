@@ -8,7 +8,7 @@ let columns = {
   name: 'Name'
 };
 
-for (var i = 0; i < 1000; i++) {
+for (var i = 0; i < 100000; i++) {
   var name = faker.commerce.productName();
   data.push([i, name]);
 }

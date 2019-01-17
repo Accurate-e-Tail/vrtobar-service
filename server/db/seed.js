@@ -22,7 +22,7 @@ const faker = require('faker');
 // Create 20 categories and 100 products
 const Category = sequelize.define('category', {
   category: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false,
   },
 });

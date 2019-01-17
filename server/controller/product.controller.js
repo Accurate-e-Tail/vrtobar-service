@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const { Product } = require('..//db/createTables.js');
+const { Product } = require('../db/createTables.js');
 const { Category } = require('../db/createTables.js');
 
 const get = (req, res) => {
@@ -7,6 +7,7 @@ const get = (req, res) => {
   const { query } = req.params;
 
   if (categoryParam === 'all departments') {
+    var startTime = Date.now();
     Product.findAll({
       where: {
         name: {
@@ -15,6 +16,8 @@ const get = (req, res) => {
       },
     })
       .then((products) => {
+        var endTime = Date.now();
+        console.log(endTime - startTime);
         res.status(200).send({ products });
       })
       .catch((err) => {
@@ -37,6 +40,8 @@ const get = (req, res) => {
         return [];
       })
       .then((products) => {
+        var endTime = Date.now();
+        console.log(endTime - startTime);
         res.status(200).send({ products });
 
         // res.status(200).send({ products });
@@ -50,14 +55,16 @@ const get = (req, res) => {
 const post = (req, res) => {
   // const categoryParam = req.params.category.toLowerCase();
   // const { query } = req.params;
-  console.log(req.body);
 
-  console.log("life is hard", req.body);
+  // insert into products (name, "createdAt", "updatedAt") values ('alex', NOW(), NOW());
+  var startTime = Date.now();
   Product.create({
       name: req.body.name,
       categoryId: 1,
     })
     .then((data) => {
+      var endTime = Date.now();
+      console.log(endTime - startTime);
       res.status(200).send(data);
     })
     .catch((error) => {
@@ -70,10 +77,6 @@ const post = (req, res) => {
 const update = (req, res, next) => {
   // const categoryParam = req.params.category.toLowerCase();
   // const { query } = req.params;
-  console.log(req.body);
-
-  console.log("life is really hard", req.body);
-  console.log("mango", req.params);
   // Product.create({
   //     name: req.body.name,
   //     categoryId: 1,
@@ -84,12 +87,14 @@ const update = (req, res, next) => {
   //   .catch((error) => {
   //     res.status(500).send(error);
   //   })
-
+  var startTime = Date.now();
     Product.update(
       {name: req.body.name},
       {where: {id: req.params.id}}
     )
     .then(function(rowsUpdated) {
+      var endTime = Date.now();
+      console.log(endTime - startTime);
       res.json(rowsUpdated)
     })
     .catch(next)
@@ -97,13 +102,15 @@ const update = (req, res, next) => {
 }
 
 const del = (req, res) => {
-
+  var startTime = Date.now();
   Product.destroy({
     where: {
       id: req.params.id
     }
   })
   .then(() => {
+    var endTime = Date.now();
+    console.log(endTime - startTime);
     res.send('done');
   })
 }

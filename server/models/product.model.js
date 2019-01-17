@@ -27,9 +27,11 @@ module.exports = (sequelize, type) => {
   name: {
     type: Sequelize.STRING,
     allowNull: false,
-  }
   },
-  {
-    timstamps: false
-  });
+  // categoryId: {
+  //   type: Sequelize.NUMBER,
+  //   defaultValue: 3
+  // }
+  },
+  );
 }

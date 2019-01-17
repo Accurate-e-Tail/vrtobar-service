@@ -14,7 +14,8 @@ mongoose.connect('mongodb://localhost:27017/amazon');
 
 var productSchema = new mongoose.Schema({
     id: Number,
-    name: String
+    name: String, 
+    categoryId: Number
   });
 
 var categorySchema = new mongoose.Schema({
@@ -33,12 +34,38 @@ silence.save(function (err, data) {
     console.log(data);
   });
 
-  const categoryPromises = [];
-const categoryNames = ['electronics', 'clothes', 'games', 'appliances', 'books'];
+//   const categoryPromises = [];
+const categoryPromises = ['electronics', 'clothes', 'games', 'appliances', 'books'];
 
-for (let i = 0; i < 5; i++) {
-  categoryPromises.push(new Category({ category: categoryNames[i] }));
-}
+// for (let i = 0; i < 5; i++) {
+//   categoryPromises.push(new Category({ category: categoryNames[i] }));
+// }
+var electronics = new Category({category: 'electronics'});
+electronics.save(function (err, data) {
+    if (err) return console.error(err);
+    console.log(data);
+})
+var clothes = new Category({category: 'clothes'});
+clothes.save(function (err, data) {
+    if (err) return console.error(err);
+    console.log(data);
+})
+var games = new Category({category: 'games'});
+games.save(function (err, data) {
+    if (err) return console.error(err);
+    console.log(data);
+})
+var appliances = new Category({category: 'appliances'});
+appliances.save(function (err, data) {
+    if (err) return console.error(err);
+    console.log(data);
+})
+var books = new Category({category: 'books'});
+books.save(function (err, data) {
+    if (err) return console.error(err);
+    console.log(data);
+})
+
 var productsGlobal = [];
 var startTime = null;
 
@@ -60,7 +87,7 @@ Promise.all(categoryPromises)
         // }));
         products.push({
           name: productName.toLowerCase(),
-          categoryId: categories[i].id,
+          categoryId: categories[i]._id,
         })
       }
     }
